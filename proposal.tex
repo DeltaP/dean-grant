@@ -1,22 +1,27 @@
 \documentclass[11pt]{article}
 \usepackage[margin=1.0in]{geometry}
+\usepackage{sectsty}
+\sectionfont{\large}
 
 \begin{document}
   \title{GPU's for Lattice Field Theory}
   \author{Anqi Cheng}
   \maketitle
 
-   \section*{Summary} %although the layout may seem awkward this is the paragraph that they say should have all the information....
-In particle physics, lattice gauge theory (LGT) is an important branch to connect experimental data and physical models.
-It is extremely computationally demanding and therefore should take advantage of new  resources as they become available.
-One emerging resource that I am eager to break into is Graphics Processing Units (GPU's).   
-My proposal is to build a workstation around two of NVIDIA's latest GPU's, the Kepler K20.  
-This workstation will be used for GPU code development and data analysis, which will benefit the doctoral dissertation of myself 
-as well as another graduate student, Gregory Petropoulos.  
-To accomplish our goal we are requesting \$10,000.  
+  \section*{Summary} %although the layout may seem awkward this is the paragraph that they say should have all the information....
+  In particle physics, lattice gauge theory (LGT) is an important branch to connect experimental data and physical models.
+  It is extremely computationally demanding and therefore should take advantage of new  resources as they become available.
+  One emerging resource that I am eager to break into is Graphics Processing Units (GPU's).   
+  My proposal is to build a workstation around two of NVIDIA's latest GPU's, the Kepler K20.  
+  This workstation will be used for GPU code development and data analysis, which will benefit the doctoral dissertation of myself as well as another graduate student, Gregory Petropoulos.  
+  To accomplish our goal we are requesting \$10,000.  
  
   \section*{Maping out the Frontier of Physics} % brief overview of our reserach, standard model, strong dynamics, bsm, lattice...
-  
+
+  \section*{Methods} % describe the lattice workflow
+  Lattice QCD workflow is generally broken into three major stages:  generate configurations, measure observables, analyze data.
+  GPU's are generally used most in the first two stages.  
+  To meet our needs
   
   \section*{Code Development aka Coding for the Future} % emphisize the need of the resource for dedicated code development, the importance of having two cards...
  The rapid growth of programmability and computation power of GPUs has trigged transformational effects in many scientific applications. As GPUs becomes 
