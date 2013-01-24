@@ -9,40 +9,49 @@
   \maketitle
 
   \section*{Overview} %although the layout may seem awkward this is the paragraph that they say should have all the information....
-  In particle physics, lattice gauge theory is an important branch to connect experimental data and physical models.
-  It is extremely computationally demanding and therefore should take advantage of new  resources as they become available.
-  One emerging resource that I am eager to break into is Graphics Processing Units (GPU's).   
-  My proposal is to build a workstation around two of NVIDIA's latest GPU's, the Kepler K20.  
+  Strongly coupled quantum field theories play an important part in Nature.
+  The best example is the strong nuclear force with is responsible for atomic nuclei existing.
+  These problems were largely intractable until lattice gauge theory turned an impossible analytic task into a difficult computational task.
+  Because studying strongly coupled quantum field theories is so computationally intensive cutting edge resources in high performance computing are used.
+  One emerging resource that I am eager to get involved in is Graphics Processing Units (GPU's).   
+  I propose to use \$10,000 to build a workstation around two of NVIDIA's latest GPU's, the Kepler K20.  
   This workstation will be used for GPU code development and data analysis, which will benefit the doctoral dissertation of myself as well as another 
   graduate student in our group, Gregory Petropoulos. 
-  To accomplish our goal we are requesting \$10,000.  
   
-  \section*{Code Development aka Coding for the Future} % emphisize the need of the resource for dedicated code development, the importance of having two cards...
-  The rapid growth of programmability and computation power of GPUs has trigged transformational effects in many scientific applications. 
-  As GPUs becomes a very attractive platform for lattice gauge theory simulations, related GPU libraries (e.g. QUDA \cite{QUDA1,QUDA2,QUDA3}) have been developed and provide a powerful framework for lattice physicists to exploit.
-  Meanwhile many large GPU clusters have been built, e.g., Edge cluster at LLNL, Dsg cluster at FNAL, and 10g cluster at JLab.
-
-  On the one hand, my research involves large scale computations which can only be performed on publicly available supercomputing resources. 
-  Having a local GPU machine for code development and testing could enable our group apply for computer time on those GPU clusters.
-  On the other hand, a local GPU machine could potentially dramatically speed up our local data analysis process.
-  Therefore building the GPU workstation could greatly benefit my research and doctoral dissertation, as well as the future development of our group.
- 
-  \section*{Methods} % describe the lattice workflow
-  Lattice QCD workflow is generally broken into three major stages:  generate configurations, measure observables, analyze data.
-  GPU's are generally used most in the first two stages.  
-  To meet our needs
-
+  \section*{Code Development aka Coding for the Future} % emphasize the need of the resource for dedicated code development, the importance of having two cards...
+  The highly parallel and energy efficient architecture of GPU's makes them attractive for high performance computing, however until relatively recently they were difficult to program.
+  This changed when NVIDIA launched CUDA and the Tesla series of cards that are specifically aimed at making GPU programming more accessible to the scientific community.
+  Since then GPU's have become a very attractive platform for lattice gauge theory simulations, and qUDA, a lattice-CUDA library \cite{QUDA1,QUDA2,QUDA3}) is in active development.
+  Codes developed with CUDA and qUDA are already run on large GPU clusters have been built such as the Edge cluster at LLNL, Dsg cluster at FNAL, and 10g cluster at JLab.
+  Additionally, a new generation of CPU / GPU hybrid machines are arriving.
+  Earlier this year one of these hybrid machines, Titan, took its place as the fastest supercomputer.
   
+  The prevalence of GPU's is on the rise and it is important to keep pace because this is the future of scientific computing.
+  As a researcher having access to this resource will have a profound effect on my future outcome by allowing me to develop new relevant skills.
+  My current academic work will also benefit because the number of machines we can apply for time in will increase.
+  By moving toward GPU programming our group will be able to take part in cutting edge code development that will allow us to run on the fastest supercomputers of today and tomorrow.
+
   \section*{Its all about the Flops} % when code development is over this will be a valuable compute resource
   When not being used for code development the machine will serve as a dedicated computational resource.  
-  The machine that I propose has two six core processors and two Keperl GPU's and can provide a theoretical peak of 2.5 Teraflops (trillion floating point operations per second).  
-  As a dedicated resource that we have access to this is 
+  The proposed machine has a peak theoretical performance of 2.5 trillion floating point operations per second (TFLOP/s).
+  To put that in prospective that is equivalent to the fastest supercomputers only 10 years ago.
+  Such a resource will greatly accelerate the speed which we can measure and analyze data generated on the larger computers that we have access to.
 
+  \section*{Methods} % describe the lattice work flow
+  The qUDA libraries for lattice gauge theory are already well developed and perform many basic tasks.
+  This machine will allow me to adapt our current code to run on GPU's and become an active developer for the lattice qUDA community.
+  Once we have a functioning code we will use the machine to preform measurements locally and quikcly.
+  The benefit of having our own local resource is that we don't have to apply for an allocation and we don't have to wait in a queue to test / run code.
+  Developing code on allocation based resources is difficult for these reasons and is generally discouraged.
+  It is much better to develop code locally and demonstrate it can scale before applying for a resource.
+  This is the driving force for having two GPU cards; we will be able to test all the intercard communication in our code locally.
+  
   \section*{Qualifications} %classic brag sheet
-  Traditional coding is a basic skill in my research. 
-  Besides I took a high performance scientific computation class from the Computer Science Department last semester, by which I got familiar with large-scale parallel computation skills. 
-  Furthermore I attend the lectures on GPUs given by Michael Clark, one of the founders of GPU computing, both on USQCD All Hands' Meeting at Fermilab last April and at INT summer program held by University of Washington last August. 
-  From the lectures I learned the basis of GPU computing and its recent development in my research field. With the knowledge and skills I mentioned above I am confident to successfully accomplish this project.
+  I am already a proficient coder and have experience writing single serial and parallel programs.
+  Last semester I took a high performance scientific computation class from the Computer Science Department last semester, which strengthened my background in large-scale parallelism.
+  Finally I attended lectures on GPU programming given by Michael Clark, a qUDA developer at NVIDIA, both on USQCD All Hands' Meeting at Fermilab last April and at INT summer program held by University of Washington last August. 
+  From these lectures I developed an basic understanding of GPU computing and its application to lattice gauge theory. 
+  With the knowledge and skills I mentioned above I am confident to successfully accomplish this project.
 
 % ---- Bibliography ----
 %
