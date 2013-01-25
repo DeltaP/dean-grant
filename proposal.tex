@@ -4,51 +4,38 @@
 \sectionfont{\large}
 
 \begin{document}
-  \title{GPU's for Lattice Gauge Theory}
+  \title{GPU's for Lattice Field Theory}
   \author{Anqi Cheng}
   \maketitle
 
   \section*{Overview} %although the layout may seem awkward this is the paragraph that they say should have all the information....
+  In this project  I propose to use a \$10,000 grant to build a workstation with two of NVIDIA's latest  Graphics Processing Units (GPUs), the Kepler K20.
+  This workstation will be used for GPU code development and data analysis for the doctoral dissertation of myself as well as another graduate student in our group, Gregory Petropoulos.\\
+  
+  \section*{GPUs for Frontier Physics}
   Strongly coupled quantum field theories play an important role in Nature.
   The best example is the strong nuclear force which is responsible for atomic nuclei existing.
-  These problems were largely intractable until lattice gauge theory turned an impossible analytic task into a difficult numerical task by putting it on a computer.
-  Because studying strongly coupled quantum field theories  on a computer is numerically intensive, lattice gauge theory is always on the cutting edge of scientific computing.
-  One emerging resource that I am eager to get involved in is Graphics Processing Units (GPU's).   
-  I propose to use a \$10,000 grant to build a workstation around two of NVIDIA's latest GPU's, the Kepler K20.  
-  This workstation will be used for GPU code development and data analysis, which will benefit the doctoral dissertation of myself as well as another 
-  graduate student in our group, Gregory Petropoulos. 
-  
-  \section*{Code Development aka Coding for the Future} % emphasize the need of the resource for dedicated code development, the importance of having two cards...
-  The highly parallel and energy efficient architecture of GPU's makes them attractive for high performance computing, however until relatively recently they were difficult to program.
-  This changed when NVIDIA launched the CUDA language and the Tesla series of GPU's that are specifically aimed at making GPU programming more accessible to the scientific community.
-  Since then GPU's have become a very attractive platform for lattice gauge theory simulations, and qUDA, a lattice-CUDA library \cite{QUDA1,QUDA2,QUDA3} is in active development.
-  Codes developed with CUDA and qUDA are already run on large GPU clusters such as the Edge cluster at LLNL, Dsg cluster at FNAL, and 10g cluster at JLab.
-  Additionally, a new generation of CPU / GPU hybrid machines are arriving; earlier this year one of these hybrid machines, Titan, took its place as the fastest supercomputer.
-  
-  It is clear that GPU's will play an ever increasing role in the future of scientific computing.
-  As a researcher having access to this resource will have a profound effect on my future by allowing me to develop a new relevant skill.
-  My current academic work will also benefit because the number of machines we can apply for computer time on will increase.
-  By moving toward GPU programming our group will be able to take part in cutting edge code development that will allow us to run on the fastest supercomputers of today and tomorrow.
-
-  \section*{Its all about the Flops} % when code development is over this will be a valuable compute resource
-  When not being used for code development the machine will serve as a dedicated computational resource.  
-  The proposed machine has a peak theoretical performance of 2.5 trillion floating point operations per second (TFLOP/s).
+  These problems were largely intractable because of their non-perturbative nature until lattice field theory turned an impossible analytic task into a difficult numerical task by putting it on a computer.
+  Because studying strongly coupled quantum field theories  on a computer is numerically intensive, lattice field theory is always on the cutting edge of scientific computing. \\\\
+ The highly parallel and energy efficient architecture of GPUs makes them attractive for high performance computing, however until relatively recently they were difficult to program.  
+ This changed when NVIDIA launched the CUDA language and the Tesla series of GPUs that are specifically aimed at making GPU programming more accessible to the scientific community.
+  Since then GPUs have become a very attractive platform for lattice field theory simulations, and QUDA, a lattice-CUDA library \cite{QUDA1,QUDA2,QUDA3} is in active development.
+   Codes developed with CUDA and qUDA are already run on large GPU clusters such as the Edge cluster at LLNL, Dsg cluster at FNAL, and 10g cluster at JLab.
+  Additionally, a new generation of CPU/GPU hybrid machines are arriving; earlier this year one of these hybrid machines, Titan, took its place as the fastest supercomputer.\\\\
+  It is clear that GPUs will play an ever increasing role in the future of scientific computing. 
+  The proposed workstation has a peak theoretical performance of 2.5 trillion floating point operations per second (TFLOP/s).
   To put that in prospective, that is equivalent to the fastest supercomputers only 10 years ago.
-  Such a resource will greatly accelerate the speed which we can measure and analyze data generated on the larger computers that we have access to.
-
-  \section*{Methods} % describe the lattice work flow
-  The qUDA libraries for lattice gauge theory are already well developed and perform many basic tasks.
-  This machine will allow me to adapt our current code to run on GPU's and become an active developer for the lattice qUDA community.
-  Once we have a functioning code we will use the machine to preform measurements locally and quikcly.
-  The benefit of having our own local resource is that we don't have to apply for an allocation and we don't have to wait in a queue to test / run code.
-  Developing code on allocation based resources is difficult for these reasons and is generally discouraged.
-  It is much better to develop code locally and demonstrate it can scale before applying for a resource.
-  This is the driving force for having two GPU cards; we will be able to test all the inter-card communication of our code locally.
-  
+  Not only will it allow me to adapt our current code to run on GPUs and become an active developer for the lattice QUDA community, but also as a dedicated computational resource it will greatly accelerate the speed at which we can measure and analyze data generated on the larger computers that we have access to.
+  By moving toward GPU programming our group will be able to take part in cutting edge code development that will allow us to run on the fastest supercomputers of today and tomorrow.
+    
+   \section*{Methods} % describe the lattice work flow
+  In lattice field theories nHYP smearing is a widely used method developed by CU researchers. 
+  In this project I will first try to adapt this method for GPUs, and then use it as an element in the Dirac eigenmode measurements, the major work of my doctoral dissertation. The long term goal will be adapting large-scale computation code on GPUs that serves the research of our group. This is the driving force for having two GPU cards; we will be able to test all the inter-card communication of our code locally and make sure it can scale well. Once getting there we will be able to apply computer time on the public GPU cluster resources. 
+    
   \section*{Qualifications} %classic brag sheet
-  I am already a proficient coder and have experience writing single serial and parallel programs.
+  I am already a proficient coder and have experience writing serial and parallel programs.
   Last semester I took a high performance scientific computation class from the Computer Science Department, which strengthened my background in large-scale parallelism.
-  Finally I attended lectures on GPU programming given by Michael Clark, a qUDA developer at NVIDIA, at the USQCD All Hands' Meeting in Fermilab last April and at the INT summer program held by University of Washington last August. 
+  Finally I attended lectures on GPU programming given by Michael Clark, a QUDA developer at NVIDIA, at the USQCD All Hands' Meeting in Fermilab last April and at the INT summer program held by University of Washington last August. 
   From these lectures I developed an basic understanding of GPU computing and its application to lattice gauge theory. 
   With the knowledge and skills I mentioned above I am confident to successfully accomplish this project.
 
