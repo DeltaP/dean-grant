@@ -1,6 +1,7 @@
 \documentclass[11pt]{article}
 \usepackage[margin=1.0in]{geometry}
 \usepackage{sectsty}
+\usepackage{url}
 \sectionfont{\large}
 
 \begin{document}
@@ -20,7 +21,7 @@
  The highly parallel and energy efficient architecture of GPUs makes them attractive for high performance computing, however until relatively recently they were difficult to program.  
  This changed when NVIDIA launched the CUDA language and the Tesla series of GPUs that are specifically aimed at making GPU programming more accessible to the scientific community.
   Since then GPUs have become a very attractive platform for lattice field theory simulations, and QUDA, a lattice-CUDA library \cite{QUDA1,QUDA2,QUDA3} is in active development.
-   Codes developed with CUDA and qUDA are already run on large GPU clusters such as the Edge cluster at LLNL, Dsg cluster at FNAL, and 10g cluster at JLab.
+   Codes developed with CUDA and QUDA are already run on large GPU clusters such as the Edge cluster at LLNL \cite{Edge}, Dsg cluster at FNAL \cite{Dsg}, and 10g cluster at JLab \cite{10g}.
   Additionally, a new generation of CPU/GPU hybrid machines are arriving; earlier this year one of these hybrid machines, Titan, took its place as the fastest supercomputer.\\\\
   It is clear that GPUs will play an ever increasing role in the future of scientific computing. 
   The proposed workstation has a peak theoretical performance of 2.5 trillion floating point operations per second (TFLOP/s).
@@ -43,7 +44,7 @@
 %
 \begin{thebibliography}{99}
 \bibitem{QUDA1}
-http://lattice.github.com/quda/
+\url{http://lattice.github.com/quda/}
 \bibitem{QUDA2}
 M. A. Clark, R. Babich, K. Barros, R. C. Brower, and C. Rebbi,
 ``Solving Lattice QCD systems of equations using mixed precision solvers on GPUs" Comput. Phys. Commun., vol. 181, 2010, p. 1517. [arXiv:0911.3191 
@@ -51,6 +52,12 @@ M. A. Clark, R. Babich, K. Barros, R. C. Brower, and C. Rebbi,
 \bibitem{QUDA3}
 R. Babich, M. A. Clark, B. Jo$\acute{o}$ ``Parallelizing the QUDA Library for Multi-GPU Calculations in Lattice Quantum Chromodynamics" [arXiv:1011.0024 
 [hep-lat]]
+\bibitem{Edge}
+\url{https://computing.llnl.gov/?set=resources&page=OCF_resources}
+\bibitem{Dsg}
+D Holmgren, N Seenu, J Simone and A Singh, ``Fermilab multicore and GPU-accelerated clusters for lattice QCD" 2012 J. Phys.: Conf. Ser. 396 042029
+\bibitem{10g}
+\url{https://wiki.jlab.org/cc/external/wiki/index.php/New_Users_Start_Here#GPU_Clusters}
 
 \end{thebibliography}
 
