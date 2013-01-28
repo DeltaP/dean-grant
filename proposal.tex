@@ -10,69 +10,62 @@
   \maketitle
 
   \section*{Overview} %although the layout may seem awkward this is the paragraph that they say should have all the information....
-  In this project  I propose to use a \$9,986.94 grant to build a workstation with two of NVIDIA's latest  Graphics Processing Units (GPUs), the Kepler K20.
-  This workstation will be used for GPU code development and data analysis for the doctoral dissertation of myself as well as another graduate student in our group, Gregory Petropoulos.\\
+ I propose to use a \$9,986.94 Dean's Graduate School Research Grant Award to build a workstation with two of NVIDIA's latest Graphics Processing Units (GPUs), the Kepler K20.
+  This workstation will be used for GPU code development and data analysis supporting my doctoral dissertation as well the dissertation of Gregory Petropoulos.\\
   
   \section*{GPUs for Frontier Physics}
   Strongly coupled quantum field theories play an important role in Nature.
   The best example is the strong nuclear force which is responsible for the existence of atomic nuclei.
-  These problems were largely intractable because they cannot be treated by the standard analytical approach known as perturbation theory. 
+  These problems were largely intractable because they cannot be treated by the standard analytical approach known as perturbation theory.
   Perturbation theory treats interactions as minor corrections (``perturbations") to simpler systems, and can only be applied when interactions are weak in strength.
 
-  In order to study strongly-interacting theories from first principles, I perform numerical lattice field theory calculations. 
-  In this approach, space and time are replaced by a regular, finite lattice of discrete sites connected by links. 
-  The fields described by the theory are likewise discretized, and defined on the lattice in such a way that we recover the original theory in continuous spacetime when the lattice is taken to be infinitely large, with its sites infinitesimally close together. 
-  The discretized theory involves ``only" millions of degrees of freedom, which allows us to stochastically calculate observables through long-established numerical techniques known as Monte Carlo importance sampling. 
+  In order to study strongly-interacting theories from first principles, I perform numerical lattice field theory calculations.
+  In this approach, space and time are replaced by a regular, finite lattice of discrete sites connected by links.
+  The fields described by the theory are likewise discretized, and defined on the lattice in such a way that we recover the original theory in continuous spacetime when the lattice is taken to be infinitely large, with its sites infinitesimally close together.
+  The discretized theory reduces the problem to millions of degrees of freedom, which allows us to stochastically calculate observables through long-established numerical techniques known as Monte Carlo importance sampling.
   These techniques require large-scale supercomputing.
 
- The highly parallel and energy efficient architecture of GPUs makes them attractive for high performance computing, however until relatively recently they were difficult to program.  
+ The highly parallel and energy efficient architecture of GPUs makes them attractive for high performance computing, however until relatively recently they were difficult to program.
  This changed when NVIDIA launched the CUDA language and the Tesla series of GPUs that are specifically aimed at making GPU programming more accessible to the scientific community.
-  Since then GPUs have become a very attractive platform for lattice field theory simulations, and QUDA, a lattice-CUDA library \cite{QUDA1,QUDA2,QUDA3} is in active development.
-   Codes developed with CUDA and QUDA are already run on large GPU clusters such as the Edge cluster at LLNL \cite{Edge}, Dsg cluster at FNAL \cite{Dsg}, and 10g cluster at JLab \cite{10g}.
-   Additionally, a new generation of CPU/GPU hybrid machines are arriving; earlier this year one of these hybrid machines, Titan, became the worlds fastest supercomputer\cite{Titan}.
+  Since then, GPUs have become a very attractive platform for lattice field theory simulations, and QUDA, a lattice-CUDA library \cite{QUDA1,QUDA2,QUDA3} is in active development.
+   Codes developed with CUDA and QUDA are already run on large GPU clusters such as the Edge cluster at Lawrence Livermore National Laboratory \cite{Edge}, Dsg cluster at Fermi National Accelerator Laboratory \cite{Dsg}, and 10g cluster at Thomas Jefferson National Laboratory \cite{10g}.
+   Additionally, a new generation of CPU/GPU hybrid machines is arriving; earlier this year one of these hybrid machines, Titan, became the worlds fastest supercomputer\cite{Titan}.
 
-  It is clear that GPUs will play an ever increasing role in the future of scientific computing. 
-  The proposed workstation has a peak theoretical performance of 2.5 trillion floating point operations per second (TFLOP/s).
+  It is clear that GPUs will play an ever increasing role in the future of scientific computing.
+  My proposed workstation has a peak theoretical performance of 2.5 trillion floating point operations per second (TFLOP/s).
   To put that in prospective, that is equivalent to the fastest supercomputers only 10 years ago.
   Not only will it allow me to adapt our current code to run on GPUs and become an active developer for the lattice QUDA community, but also as a dedicated computational resource it will greatly accelerate the speed at which we can measure and analyze data generated on the larger computers that we have access to.
   By moving toward GPU programming our group will be able to take part in cutting edge code development that will allow us to run on the fastest supercomputers of today and tomorrow.
     
    \section*{Methods} % describe the lattice work flow
-<<<<<<< HEAD
-  In lattice field theories nHYP smearing is a widely used method developed by CU researchers \cite{nHYP1,nHYP2,nHYP3}. 
-  In this project I will first try to adapt this method for GPUs, and then use it as an element in the Dirac eigenmode measurements, the major work of my doctoral dissertation \cite{paper1, paper2, paper3}. The long term goal will be adapting large-scale computation code on GPUs that serves the research of our group. This is the driving force for having two GPU cards; we will be able to test all the inter-card communication of our code locally and make sure it can scale well. Once getting there we will be able to apply computer time on the public GPU cluster resources. 
-=======
-  In lattice field theory, nHYP smearing is a widely used formulation developed by University of Colorado researchers. 
-  This formulation is still used by our group and is an essential part of our current work.
-  In this project I will first adapt this method for GPUs.
+  In lattice field theory, nHYP smearing is a widely used formulation developed by University of Colorado researchers \cite{nHYP1,nHYP2,nHYP3}.
+  This formulation is an essential part of our group's current research.
+  In this project I will first adapt our group's nHYP code to run on GPUs.
   Once complete our nHYP routine can be made available as part of QUDA to benefit others in the community.
-  Then I will develop code for Dirac eigenmode measurements, the major work of my doctoral dissertation.
-  The long term goal will be adapting large-scale computation code on GPUs that serves the research of our group. 
-  This is the benefit of having two GPU cards; we will be able to test all the inter-card communication of our code locally and make sure it can scale well. 
-  Once our code is shown to run on multiple cards, we will be able to apply computer time on GPU clusters at the national laboratories. 
->>>>>>> b2d8e9e0c061a56e7e3bbf30ad28e8867847b1b9
+  Next I will develop code for Dirac eigenmode measurements, the major work of my doctoral dissertation \cite{paper1, paper2, paper3}..
+  My long term goal will be adapting large-scale computation code on GPUs that serves the research of our group.
+ The benefit of having two GPU cards is that we will be able to test the inter-card communication of our code locally and make sure it scales well.
+  Once our code is shown to run on multiple cards, we will be able to apply computer time on GPU clusters at the national laboratories.
     
   \section*{Qualifications} %classic brag sheet
   I am already a proficient coder and have experience writing serial and parallel programs.
   Last semester I took a high performance scientific computation class from the Computer Science Department, which strengthened my background in large-scale parallelism.
-  Finally I attended lectures on GPU programming given by Michael Clark, a QUDA developer at NVIDIA, at the USQCD All Hands' Meeting in Fermilab last April and at the INT summer program held by University of Washington last August. 
-  From these lectures I developed an basic understanding of GPU computing and its application to lattice gauge theory. 
-  With the knowledge and skills I mentioned above I am confident to successfully accomplish this project.
+  Finally I attended lectures on GPU programming given by Michael Clark, a QUDA developer at NVIDIA, in the INT summer program held by University of Washington last August.
+  From these lectures I developed an understanding of GPU computing and its application to lattice gauge theory.
+  With the knowledge and skills I mentioned above I am confident I can make great progress in lattice-GPU computing if awarded this grant.
   \pagebreak
 
 % ---- Bibliography ----
 %
 \begin{thebibliography}{99}
-\bibitem{Titan}
-\url{http://www.top500.org/lists/2012/11/}
 \bibitem{QUDA1}
 \url{http://lattice.github.com/quda/}
 \bibitem{QUDA2}
 M. A. Clark, R. Babich, K. Barros, R. C. Brower, and C. Rebbi,
-``Solving Lattice QCD systems of equations using mixed precision solvers on GPUs" Comput. Phys. Commun., vol. 181, 2010, p. 1517. [arXiv:0911.3191 
+``Solving Lattice QCD systems of equations using mixed precision solvers on GPUs" Comput. Phys. Commun., vol. 181, 2010, p. 1517. [arXiv:0911.3191
 [hep-lat]]
 \bibitem{QUDA3}
-R. Babich, M. A. Clark, B. Jo$\acute{o}$ ``Parallelizing the QUDA Library for Multi-GPU Calculations in Lattice Quantum Chromodynamics" [arXiv:1011.0024 
+R. Babich, M. A. Clark, B. Jo$\acute{o}$ ``Parallelizing the QUDA Library for Multi-GPU Calculations in Lattice Quantum Chromodynamics" [arXiv:1011.0024
 [hep-lat]]
 \bibitem{Edge}
 \url{https://computing.llnl.gov/?set=resources&page=OCF_resources}
@@ -80,6 +73,8 @@ R. Babich, M. A. Clark, B. Jo$\acute{o}$ ``Parallelizing the QUDA Library for Mu
 D Holmgren, N Seenu, J Simone and A Singh, ``Fermilab multicore and GPU-accelerated clusters for lattice QCD" 2012 J. Phys.: Conf. Ser. 396 042029
 \bibitem{10g}
 \url{https://wiki.jlab.org/cc/external/wiki/index.php/New_Users_Start_Here#GPU_Clusters}
+\bibitem{Titan}
+\url{http://www.top500.org/lists/2012/11/}
 \bibitem{nHYP1}
 A. Hasenfratz, F. Knechtli, ``Flavor Symmetry and the Static Potential with Hypercubic Blocking" Phys.Rev. D64 (2001) 034504
 \bibitem{nHYP2}
